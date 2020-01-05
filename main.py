@@ -6,6 +6,7 @@ import string
 import os
 import os.path
 import traceback
+import time
 
 from discord.ext import commands
 from discord.ext.commands import Bot
@@ -35,7 +36,7 @@ async def help(ctx):
 
 @bot.command(pass_context=True)
 async def stockpriceinfo(ctx):
-    embed = discord.Embed(title='s.stockprice Info', description="Current Stock Price", color = 0x21CE99)
+    embed = discord.Embed(title='Command Info', description="Current Stock Price", color = 0x21CE99)
     embed.add_field(name="Information", value="Using s.stockprice will give you the current price of a stock of your choosing.")
     await bot.send_message(ctx.message.channel, embed=embed)
     print("stockpriceinfo command recieved.")
