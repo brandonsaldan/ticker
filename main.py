@@ -14,7 +14,7 @@ from io import StringIO
 from os import listdir
 from os.path import isfile, join
 
-bot = commands.Bot(command_prefix="s.")
+bot = commands.Bot(command_prefix="t.")
 bot.remove_command("help")
 client = discord.Client()
 
@@ -29,7 +29,7 @@ async def on_ready():
 @bot.command(pass_context=True)
 async def help(ctx):
     embed = discord.Embed(title='Ticker Help', description="**Invite Link:** https://discordapp.com/api/oauth2/authorize?client_id=663214101320695833&permissions=8&scope=bot", color = 0x21CE99)
-    embed.add_field(name="Specific Information", value="You can get more specific information on each command by doing `s.[module]info` for example, `s.stockpriceinfo` will give you a complete description of each command in that module.")
+    embed.add_field(name="Specific Information", value="You can get more specific information on each command by doing `t.[module]info` for example, `t.stockpriceinfo` will give you a complete description of each command in that module.")
     await bot.send_message(ctx.message.channel, embed=embed)
     print("Help command recieved.")
     print("--------------------")
@@ -37,7 +37,7 @@ async def help(ctx):
 @bot.command(pass_context=True)
 async def stockpriceinfo(ctx):
     embed = discord.Embed(title='Command Info', description="Current Stock Price", color = 0x21CE99)
-    embed.add_field(name="Information", value="Using s.stockprice will give you the current price of a stock of your choosing.")
+    embed.add_field(name="Information", value="Using t.stockprice will give you the current price of a stock of your choosing.")
     await bot.send_message(ctx.message.channel, embed=embed)
     print("stockpriceinfo command recieved.")
     print("--------------------")
