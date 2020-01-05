@@ -1,19 +1,14 @@
 import discord
 import asyncio
-import math
-import datetime
 import requests
 import json
 import string
-import time
 import os
 import os.path
 import traceback
 
 from discord.ext import commands
 from discord.ext.commands import Bot
-from datetime import datetime, date
-from random import randint
 from io import StringIO
 from os import listdir
 from os.path import isfile, join

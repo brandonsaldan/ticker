@@ -1,19 +1,14 @@
 import discord
 import asyncio
-import math
-import datetime
 import requests
 import json
 import string
-import time
 import os
 import os.path
 import traceback
 
 from discord.ext import commands
 from discord.ext.commands import Bot
-from datetime import datetime, date
-from random import randint
 from io import StringIO
 from os import listdir
 from os.path import isfile, join
@@ -85,7 +80,7 @@ async def ping(ctx):
     #await bot.edit_message(pinger, 'ℹ️ | **Pong!** ``' + ping + 'ms``') # you can edit this to say whatever you want really. Hope this helps.
     embed = discord.Embed(colour=discord.Colour(0x989898))
 
-    embed.add_field(name="Acre Ping", value="Ping: **{}ms** ".format(ping))
+    embed.add_field(name="StockBot Ping", value="Ping: **{}ms** ".format(ping))
     await bot.delete_message(pinger)
     await bot.say(embed=embed)
     print("ping command recieved.")
