@@ -28,7 +28,7 @@ async def on_ready():
 
 @bot.command(pass_context=True)
 async def help(ctx):
-    embed = discord.Embed(title='StockBot Help', description="**Invite Link:** https://discordapp.com/api/oauth2/authorize?client_id=663214101320695833&permissions=8&scope=bot", color = 0x21CE99)
+    embed = discord.Embed(title='Ticker Help', description="**Invite Link:** https://discordapp.com/api/oauth2/authorize?client_id=663214101320695833&permissions=8&scope=bot", color = 0x21CE99)
     embed.add_field(name="Specific Information", value="You can get more specific information on each command by doing `s.[module]info` for example, `s.stockpriceinfo` will give you a complete description of each command in that module.")
     await bot.send_message(ctx.message.channel, embed=embed)
     print("Help command recieved.")
@@ -81,7 +81,7 @@ async def ping(ctx):
     #await bot.edit_message(pinger, 'ℹ️ | **Pong!** ``' + ping + 'ms``') # you can edit this to say whatever you want really. Hope this helps.
     embed = discord.Embed(colour=discord.Colour(0x989898))
 
-    embed.add_field(name="StockBot Ping", value="Ping: **{}ms** ".format(ping))
+    embed.add_field(name="Ticker Ping", value="Ping: **{}ms** ".format(ping))
     await bot.delete_message(pinger)
     await bot.say(embed=embed)
     print("ping command recieved.")
