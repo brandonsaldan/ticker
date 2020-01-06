@@ -79,7 +79,7 @@ async def ping(ctx):
     pinger = await bot.send_message(ctx.message.channel, 'Pong | Loading latency..')
     ping = '%.2f' % (1000*(time.monotonic()-time_then))
     #await bot.edit_message(pinger, 'ℹ️ | **Pong!** ``' + ping + 'ms``') # you can edit this to say whatever you want really. Hope this helps.
-    embed = discord.Embed(colour=discord.Colour(0x989898))
+    embed = discord.Embed(colour=discord.Colour(0x21CE99))
 
     embed.add_field(name="Ticker Ping", value="Ping: **{}ms** ".format(ping))
     await bot.delete_message(pinger)
