@@ -4,4 +4,4 @@
 
 --------
 
-Ticker is a multifunctional bot build on the discord.py API wrapper. It utilizes the Financial Modeling Prep API to deliver stock prices and other information.
+Ticker is a multifunctional bot built on the discord.py API wrapper. It utilizes the Financial Modeling Prep API to deliver stock prices and other information.
